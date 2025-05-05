@@ -1,8 +1,4 @@
 //1) Ask for the user's name and print “Hello, *name*”;
-let a = 10;
-let b = 24;
-
-console.log (a+b)
 
 let username = prompt('what is ur name?');
 console.log('hello ' + username)
@@ -24,6 +20,23 @@ console.log(userAge);
 let sideLength = prompt('what is the length of a side of a square?');
 let squarePerimeter = sideLength * 4;
 console.log(squarePerimeter);
+
+
+
+
+
+
+
+
+
+//1.Ask the user for the radius of a circle and print the area of such a circle.
+
+
+
+
+
+//2.Ask the user for the distance in kilometers between two cities and how many hours they want to get there. Calculate the speed at which you need to move to be on time.
+//3.Implement a currency converter. The user enters dollars, the program converts them into euros. The exchange rate is kept constant.
 
 
 
