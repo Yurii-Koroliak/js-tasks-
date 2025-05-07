@@ -84,7 +84,9 @@ console.log((a+b).toFixed(1));
 
 // Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.
 // Add the string “1” and the digit 2 (both operands must be in variables), get a mathematically correct answer.
-
+let c = '1';
+let d = 2;
+console.log(Number(c)+d);
 
 
 // Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
