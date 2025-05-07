@@ -76,25 +76,59 @@
 // Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.
 // Add 0.1 and 0.2 to get a mathematically correct answer.
 
-let a = 0.1;
-let b = 0.2;
-console.log((a+b).toFixed(1));
+// let a = 0.1;
+// let b = 0.2;
+// console.log((a+b).toFixed(1));
 
 
 
 // Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.
 // Add the string “1” and the digit 2 (both operands must be in variables), get a mathematically correct answer.
-let c = '1';
-let d = 2;
-console.log(Number(c)+d);
+
+// let c = '1';
+// let d = 2;
+// console.log(Number(c)+d);
 
 
 
 // Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
 // The user specifies the size of the flash drive in GB. The program should calculate how many files of size 820 MB can be placed on the flash drive.
 
-let sizeFlash = prompt('what is size of ur flash drive?');
-const sizeFile = 820;
-let quantityFiles = (sizeFlash%sizeFile)
 
-console.log(((sizeFlash/sizeFile).toFixed(0)) + ' files u can place on ur flash drive and ' + quantityFiles + 'MB left on the flash drive');
+// let sizeFlash = prompt('what is size of ur flash drive?');
+// const sizeFile = 820;
+// let quantityFiles = (sizeFlash%sizeFile)
+
+// console.log(((sizeFlash/sizeFile).toFixed(0)) + ' files u can place on ur flash drive and ' + quantityFiles + 'MB left on the flash drive');
+
+
+
+
+
+
+
+// Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
+// The user enters the amount of money in the wallet and the price of one chocolate bar. The program prints how many chocolates the user can buy and how much change he will have left.
+
+
+
+let money = Number(prompt('how much money do u have?'));
+let priceChocolate = Number(prompt('how much one chocolate bar?'));
+
+let quantityMoney = (money%priceChocolate);
+console.log(((money/priceChocolate).toFixed(0)) + ' chokolate bar u can buy and ' + quantityMoney + ' $ u still have ');
+
+
+
+
+
+// Запитай у користувача тризначне число і виведи його задом наперед.
+// Ask the user for a three-digit number and print it backwards.
+
+
+
+
+
+
+// Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
+// The user enters the amount of a deposit in a bank for 2 months, with an interest rate of 5% per annum. Print the amount of accrued interest.
