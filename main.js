@@ -89,5 +89,12 @@ let d = 2;
 console.log(Number(c)+d);
 
 
+
 // Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
 // The user specifies the size of the flash drive in GB. The program should calculate how many files of size 820 MB can be placed on the flash drive.
+
+let sizeFlash = prompt('what is size of ur flash drive?');
+const sizeFile = 820;
+let quantityFiles = (sizeFlash%sizeFile)
+
+console.log(((sizeFlash/sizeFile).toFixed(0)) + ' files u can place on ur flash drive and ' + quantityFiles + 'MB left on the flash drive');
