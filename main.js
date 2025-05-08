@@ -125,9 +125,9 @@
 // Запитай у користувача тризначне число і виведи його задом наперед.
 // Ask the user for a three-digit number and print it backwards.
 
-let number3digit = prompt(`give me three-digit number`);
-let numberReverse = String(number3digit % 10) + String(Math.floor((number3digit % 100) / 10)) + String(Math.floor(number3digit / 100));
-console.log(numberReverse);
+// let number3digit = prompt(`give me three-digit number`);
+// let numberReverse = String(number3digit % 10) + String(Math.floor((number3digit % 100) / 10)) + String(Math.floor(number3digit / 100));
+// console.log(numberReverse);
 
 // Math.floor - округляет число вниз --------------------------------------------------------------------------------------
 
@@ -136,3 +136,12 @@ console.log(numberReverse);
 
 // Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
 // The user enters the amount of a deposit in a bank for 2 months, with an interest rate of 5% per annum. Print the amount of accrued interest.
+
+
+let deposit = Number(prompt('how many money do u wanna give in our bank for 2 month?'));
+const monthlyProcent = Number((5/12).toFixed(2));
+console.log(((deposit*(monthlyProcent*2))/100) + deposit);
+
+
+
+
