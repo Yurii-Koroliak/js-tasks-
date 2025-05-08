@@ -138,11 +138,63 @@
 // The user enters the amount of a deposit in a bank for 2 months, with an interest rate of 5% per annum. Print the amount of accrued interest.
 
 
-let deposit = Number(prompt('how many money do u wanna give in our bank for 2 month?'));
-let term = Number(prompt('for how many months do you want to invest your money?'))
-const monthlyProcent = Number((5/12).toFixed(2));
-console.log(((deposit*(monthlyProcent*term))/100) + deposit);
+// let deposit = Number(prompt('how many money do u wanna give in our bank for 2 month?'));
+// let term = Number(prompt('for how many months do you want to invest your money?'));
+// const monthlyProcent = Number((5/12).toFixed(2));
+// console.log(((deposit*(monthlyProcent*term))/100) + deposit);
 
+
+
+
+
+
+
+
+
+
+// TASKS FOR THE THIRD LESSON
+
+
+
+// Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
+// Ask the user for his age and determine whether he is a child (0-11), teenager (12-17), adult (18_59) or pensioner (60 ...), and allow for the possibility of entering incorrect data.
+let yearsOld = Number(prompt('How old are u?'));
+
+switch (true) {
+    case (yearsOld <= 11):
+        console.log('u are child');
+    break;
+    
+    case (yearsOld <= 17):
+        console.log('u are teenager');
+    break;
+
+    case (yearsOld <= 59):
+        console.log('u are adult');
+    break;
+
+    case (yearsOld > 59):
+        console.log('u are pensia');
+    break;
+
+    default: 
+        console.log('u are chmo, write pls a correct number of ur years old');
+};
+
+
+
+
+// Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
+// Ask the user for a number from 0 to 9 and display the special character that is located on this key (1 !, 2 @, 3 #, etc.).
+
+// Підрахуй суму всіх чисел в заданому користувачем діапазоні.
+// Calculate the sum of all numbers in the range specified by the user.
+
+// Запитай у користувача 2 числа і знайди найбільший спільний дільник.
+// Ask the user for 2 numbers and find the greatest common divisor.
+
+// Запитай у користувача число і виведи всі дільники цього числа.
+// Ask the user for a number and print all divisors of this number.
 
 
 
