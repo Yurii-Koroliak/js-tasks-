@@ -33,9 +33,9 @@
 // let circleRadius = Number(prompt('what is radius of the circle?'));
 // let circlePerimetr = Number((Math.PI*(Math.pow(circleRadius, 2))).toFixed(2));
 // console.log(circlePerimetr);
-// Math.PI = число пи
-// toFixed(2) = округляет до 2 знаков после запятой
-// Math.pow = возводит в степень
+// Math.PI = число пи-----------------------------------------------------------------------------------------------------------------------------------------
+// toFixed(2) = округляет до 2 знаков после запятой-----------------------------------------------------------------------------------------------------------
+// Math.pow = возводит в степень------------------------------------------------------------------------------------------------------------------------------
 
 
 //2.Ask the user for the distance in kilometers between two cities and how many hours they want to get there. Calculate the speed at which you need to move to be on time.
@@ -112,11 +112,11 @@
 
 
 
-let money = Number(prompt('how much money do u have?'));
-let priceChocolate = Number(prompt('how much one chocolate bar?'));
+// let money = Number(prompt('how much money do u have?'));
+// let priceChocolate = Number(prompt('how much one chocolate bar?'));
 
-let quantityMoney = (money%priceChocolate);
-console.log(((money/priceChocolate).toFixed(0)) + ' chokolate bar u can buy and ' + quantityMoney + ' $ u still have ');
+// let quantityMoney = (money%priceChocolate);
+// console.log(((money/priceChocolate).toFixed(0)) + ' chokolate bar u can buy and ' + quantityMoney + ' $ u still have ');
 
 
 
@@ -125,7 +125,11 @@ console.log(((money/priceChocolate).toFixed(0)) + ' chokolate bar u can buy and 
 // Запитай у користувача тризначне число і виведи його задом наперед.
 // Ask the user for a three-digit number and print it backwards.
 
+let number3digit = prompt(`give me three-digit number`);
+let numberReverse = String(number3digit % 10) + String(Math.floor((number3digit % 100) / 10)) + String(Math.floor(number3digit / 100));
+console.log(numberReverse);
 
+// Math.floor - округляет число вниз --------------------------------------------------------------------------------------
 
 
 
