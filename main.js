@@ -134,13 +134,14 @@
 
 
 
-// Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
+// Користувач вводить суму вкладу в банк й на скільки місяців він хоче вкласти гроші, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
 // The user enters the amount of a deposit in a bank for 2 months, with an interest rate of 5% per annum. Print the amount of accrued interest.
 
 
 let deposit = Number(prompt('how many money do u wanna give in our bank for 2 month?'));
+let term = Number(prompt('for how many months do you want to invest your money?'))
 const monthlyProcent = Number((5/12).toFixed(2));
-console.log(((deposit*(monthlyProcent*2))/100) + deposit);
+console.log(((deposit*(monthlyProcent*term))/100) + deposit);
 
 
 
