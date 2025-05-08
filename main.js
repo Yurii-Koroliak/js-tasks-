@@ -158,34 +158,80 @@
 
 // Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
 // Ask the user for his age and determine whether he is a child (0-11), teenager (12-17), adult (18_59) or pensioner (60 ...), and allow for the possibility of entering incorrect data.
-let yearsOld = Number(prompt('How old are u?'));
 
-switch (true) {
-    case (yearsOld <= 11):
-        console.log('u are child');
-    break;
+
+
+// let yearsOld = Number(prompt('How old are u?'));
+
+// switch (true) {
+//     case (yearsOld <= 11):
+//         console.log('u are child');
+//     break;
     
-    case (yearsOld <= 17):
-        console.log('u are teenager');
-    break;
+//     case (yearsOld <= 17):
+//         console.log('u are teenager');
+//     break;
 
-    case (yearsOld <= 59):
-        console.log('u are adult');
-    break;
+//     case (yearsOld <= 59):
+//         console.log('u are adult');
+//     break;
 
-    case (yearsOld > 59):
-        console.log('u are pensia');
-    break;
+//     case (yearsOld > 59):
+//         console.log('u are pensia');
+//     break;
 
-    default: 
-        console.log('u are chmo, write pls a correct number of ur years old');
-};
+//     default: 
+//         console.log('u are chmo, write pls a correct number of ur years old');
+// };
+
+
+
 
 
 
 
 // Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
 // Ask the user for a number from 0 to 9 and display the special character that is located on this key (1 !, 2 @, 3 #, etc.).
+
+
+
+let userNumber = Number(prompt('give me a 1 number'));
+
+switch (userNumber) {
+    case 1:
+        console.log('!');
+    break;
+    case 2:
+        console.log('@');
+    break;
+    case 3:
+        console.log('#');
+    break;
+    case 4:
+        console.log('$');
+    break;
+    case 5:
+        console.log('%');
+    break;
+    case 6:
+        console.log('^');
+    break;
+    case 7:
+        console.log('&');
+    break;
+    case 8:
+        console.log('*');
+    break;
+    case 9:
+        console.log('(');
+    break;
+    case 0:
+        console.log(')');
+    break;
+
+    default: 
+    console.log('u are chmo, write pls only 1 and correct number');
+}
 
 // Підрахуй суму всіх чисел в заданому користувачем діапазоні.
 // Calculate the sum of all numbers in the range specified by the user.
