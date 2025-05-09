@@ -259,18 +259,18 @@
 
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник.
 // Ask the user for 2 numbers and find the greatest common divisor.
-let numberOne = prompt('write first number');
-let numberTwo = prompt('write second number');
+let numberOne = Number(prompt('write first number'));
+let numberTwo = Number(prompt('write second number'));
 let numberResult;
 
-for (let a = 1; a <= numberOne; a++) {
-    if (numberOne % a === 0 && numberTwo % a ===0) {
+for (let a = 1; a <= (Math.min(numberOne, numberTwo)); a++) {
+    if (numberOne % a === 0 && numberTwo % a === 0) {
         numberResult = a;
     }
 }
 console.log(numberResult);
 
-
+// работает потому что нимбер резалт записывает в себя только последнее значение которое берет а-----------------------------------------------------------------------------
 //numberOne % a === 0 && numberTwo % a ===0 ---------------------------------------------------------------------------------------------------------------------------------
 // значит типо число1 остача с деления строго равно 0 А ТАК ЖЕ число2 остача с деления строго равна 0------------------------------------------------------------------------
 
