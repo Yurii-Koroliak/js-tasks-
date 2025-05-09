@@ -233,20 +233,25 @@
 //     console.log('u are chmo, write pls only 1 and correct number');
 // }
 
+
+
+
+
+
 // Підрахуй суму всіх чисел в заданому користувачем діапазоні.
 // Calculate the sum of all numbers in the range specified by the user.
 
-let numberRangeStart = Number(prompt('Give me the first number of your range'));          
-let numberRangeEnd = Number(prompt('Give me the second number of your range'));           
+// let numberRangeStart = Number(prompt('Give me the first number of your range'));          
+// let numberRangeEnd = Number(prompt('Give me the second number of your range'));           
 
-let numbersSum = 0; 
-let i;
+// let numbersSum = 0; 
+// let i;
 
-for (i = numberRangeStart; i <= numberRangeEnd; i++) {
-    numbersSum = numbersSum + i;
-};
+// for (i = numberRangeStart; i <= numberRangeEnd; i++) {
+//     numbersSum = numbersSum + i;
+// };
 
-console.log("Сумма чисел от " + numberRangeStart + " до " + numberRangeEnd + " = " + numbersSum);
+// console.log("Сумма чисел от " + numberRangeStart + " до " + numberRangeEnd + " = " + numbersSum);
 
 
 
@@ -255,8 +260,20 @@ console.log("Сумма чисел от " + numberRangeStart + " до " + number
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник.
 // Ask the user for 2 numbers and find the greatest common divisor.
 
+
+
+
 // Запитай у користувача число і виведи всі дільники цього числа.
 // Ask the user for a number and print all divisors of this number.
+
+let number = prompt('Введіть число:');
+
+console.log(`Дільники числа ${number}:`);
+for (let i = 1; i <= number; i++) {
+  if (number % i === 0) {
+    console.log(i);
+  }
+}
 
 
 
