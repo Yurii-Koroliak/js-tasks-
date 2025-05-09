@@ -259,21 +259,32 @@
 
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник.
 // Ask the user for 2 numbers and find the greatest common divisor.
+let numberOne = prompt('write first number');
+let numberTwo = prompt('write second number');
+let numberResult;
 
-
+for (let a = 1; a <= numberOne; a++) {
+    if (numberOne % a === 0 && numberTwo % a ===0) {
+        numberResult = a;
+    }
+}
+console.log(numberResult);
 
 
 // Запитай у користувача число і виведи всі дільники цього числа.
 // Ask the user for a number and print all divisors of this number.
 
-let number = prompt('Введіть число:');
+// let number = prompt('Введіть число:');
 
-console.log(`Дільники числа ${number}:`);
-for (let i = 1; i <= number; i++) {
-  if (number % i === 0) {
-    console.log(i);
-  }
-}
+// console.log(`Дільники числа ${number}:`);
+// for (let i = 1; i <= number; i++) {
+//   if (number % i === 0) {
+//     console.log(i);
+//   }
+// }
+
+
+
 
 
 
