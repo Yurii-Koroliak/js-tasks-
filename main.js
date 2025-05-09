@@ -195,46 +195,62 @@
 
 
 
-let userNumber = Number(prompt('give me a 1 number'));
+// let userNumber = Number(prompt('give me a 1 number'));
 
-switch (userNumber) {
-    case 1:
-        console.log('!');
-    break;
-    case 2:
-        console.log('@');
-    break;
-    case 3:
-        console.log('#');
-    break;
-    case 4:
-        console.log('$');
-    break;
-    case 5:
-        console.log('%');
-    break;
-    case 6:
-        console.log('^');
-    break;
-    case 7:
-        console.log('&');
-    break;
-    case 8:
-        console.log('*');
-    break;
-    case 9:
-        console.log('(');
-    break;
-    case 0:
-        console.log(')');
-    break;
+// switch (userNumber) {
+//     case 1:
+//         console.log('!');
+//     break;
+//     case 2:
+//         console.log('@');
+//     break;
+//     case 3:
+//         console.log('#');
+//     break;
+//     case 4:
+//         console.log('$');
+//     break;
+//     case 5:
+//         console.log('%');
+//     break;
+//     case 6:
+//         console.log('^');
+//     break;
+//     case 7:
+//         console.log('&');
+//     break;
+//     case 8:
+//         console.log('*');
+//     break;
+//     case 9:
+//         console.log('(');
+//     break;
+//     case 0:
+//         console.log(')');
+//     break;
 
-    default: 
-    console.log('u are chmo, write pls only 1 and correct number');
-}
+//     default: 
+//     console.log('u are chmo, write pls only 1 and correct number');
+// }
 
 // Підрахуй суму всіх чисел в заданому користувачем діапазоні.
 // Calculate the sum of all numbers in the range specified by the user.
+
+let numberRangeStart = Number(prompt('Give me the first number of your range'));          
+let numberRangeEnd = Number(prompt('Give me the second number of your range'));           
+
+let numbersSum = 0; 
+let i;
+
+for (i = numberRangeStart; i <= numberRangeEnd; i++) {
+    numbersSum = numbersSum + i;
+};
+
+console.log("Сумма чисел от " + numberRangeStart + " до " + numberRangeEnd + " = " + numbersSum);
+
+
+
+
 
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник.
 // Ask the user for 2 numbers and find the greatest common divisor.
