@@ -305,16 +305,30 @@
 // from 500 and above - 7%.
 
 
-let price = Number(prompt('what is the purchase price'));
+// let price = Number(prompt('what is the purchase price'));
 
 
 
-if (300 > price && price> 200) {
-    console.log(`u have discount 3%, u must pay only ${price-((price*3)/100)}`);
-} else if (500 > price && price > 300) {
-    console.log(`u have discount 5%, u must pay only ${price-((price*5)/100)}`);
-} else if (price >= 700) {
-    console.log(`u have discount 7%, u must pay only ${price-((price*7)/100)}`);
-} else {
-    console.log(`no discount u must pay ${price}`);
+// if (300 > price && price> 200) {
+//     console.log(`u have discount 3%, u must pay only ${price-((price*3)/100)}`);
+// } else if (500 > price && price > 300) {
+//     console.log(`u have discount 5%, u must pay only ${price-((price*5)/100)}`);
+// } else if (price >= 700) {
+//     console.log(`u have discount 7%, u must pay only ${price-((price*7)/100)}`);
+// } else {
+//     console.log(`no discount u must pay ${price}`);
+// }
+
+
+// Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
+// Loop the display of days of the week as follows: “Day of the week. Do you want to see the next day?” and so on until the user clicks OK.
+
+let chois = confirm('do u wanna to see day of week?');
+let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+let q = 0;
+
+while ((chois && q) < daysOfWeek.length) {
+    console.log(daysOfWeek[q]);
+    q++;
+    chois = confirm('Do you want to see the next day of the week?');
 }
