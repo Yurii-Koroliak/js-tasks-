@@ -259,16 +259,16 @@
 
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник.
 // Ask the user for 2 numbers and find the greatest common divisor.
-let numberOne = Number(prompt('write first number'));
-let numberTwo = Number(prompt('write second number'));
-let numberResult;
+// let numberOne = Number(prompt('write first number'));
+// let numberTwo = Number(prompt('write second number'));
+// let numberResult;
 
-for (let a = 1; a <= (Math.min(numberOne, numberTwo)); a++) {
-    if (numberOne % a === 0 && numberTwo % a === 0) {
-        numberResult = a;
-    }
-}
-console.log(numberResult);
+// for (let a = 1; a <= (Math.min(numberOne, numberTwo)); a++) {
+//     if (numberOne % a === 0 && numberTwo % a === 0) {
+//         numberResult = a;
+//     }
+// }
+// console.log(numberResult);
 
 // работает потому что нимбер резалт записывает в себя только последнее значение которое берет а-----------------------------------------------------------------------------
 //numberOne % a === 0 && numberTwo % a ===0 ---------------------------------------------------------------------------------------------------------------------------------
@@ -293,3 +293,28 @@ console.log(numberResult);
 
 
 
+
+// Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
+// від 200 до 300 - знижка буде 3%; 
+// від 300 до 500 - 5%;
+// від 500 і вище - 7%.
+
+// Ask the user for the purchase amount and print the amount to be paid with a discount:
+// from 200 to 300 - the discount will be 3%; 
+// from 300 to 500 - 5%;
+// from 500 and above - 7%.
+
+
+let price = Number(prompt('what is the purchase price'));
+
+
+
+if (300 > price && price> 200) {
+    console.log(`u have discount 3%, u must pay only ${price-((price*3)/100)}`);
+} else if (500 > price && price > 300) {
+    console.log(`u have discount 5%, u must pay only ${price-((price*5)/100)}`);
+} else if (price >= 700) {
+    console.log(`u have discount 7%, u must pay only ${price-((price*7)/100)}`);
+} else {
+    console.log(`no discount u must pay ${price}`);
+}
