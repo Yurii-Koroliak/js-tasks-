@@ -323,12 +323,48 @@
 // Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
 // Loop the display of days of the week as follows: “Day of the week. Do you want to see the next day?” and so on until the user clicks OK.
 
-let chois = confirm('do u wanna to see day of week?');
-let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-let q = 0;
+// let chois = confirm('do u wanna to see day of week?');
+// let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+// let q = 0;
 
-while ((chois && q) < daysOfWeek.length) {
-    console.log(daysOfWeek[q]);
-    q++;
-    chois = confirm('Do you want to see the next day of the week?');
+// while (chois && q < daysOfWeek.length) {
+//     console.log(daysOfWeek[q]);
+//     q++;
+//     chois = confirm('Do you want to see the next day of the week?');
+// };
+
+
+
+
+
+
+
+// Гра «Вгадай число». Запропонуй користувачеві загадати число від 0 до 100 і відгадай його наступним способом: кожну ітерацію циклу діли діапазон чисел навпіл,
+// записуй результат в N і питай у користувача «Ваше число> N, <N або == N?». Залежно від того що вказав користувач, зменшуй діапазон. 
+// Початковий діапазон від 0 до 100, поділи навпіл і отримай 50. Якщо користувач вказав, що його число> 50, то зміни діапазон на від 50 до 100. 
+// І так до тих пір, поки користувач не вибере == N (буде корисним почитати про алгоритм: "бінарний пошук").
+// “Guess the number” game. Ask the user to guess a number from 0 to 100 and guess it in the following way: divide the range of numbers in half each iteration of the loop,
+// write the result to N and ask the user “Is your number > N, <N or == N?”. Depending on the user's answer, reduce the range. 
+// The initial range is from 0 to 100, divide it in half and get 50. If the user said their number is > 50, then change the range to 50 to 100. 
+// And so on until the user selects == N (it will be useful to read about the algorithm: “binary search”).
+
+let min = 0;
+let max = 100;
+let guess;
+let answer;
+
+alert("Think of a number from 0 to 100, and I'll guess it!");
+
+while (true) {
+  guess = Math.floor((min + max) / 2);
+  answer = prompt(`ur number > ${guess}, < ${guess} or == ${guess}?`);
+
+  if (answer === "==") {
+    alert(`I guessed it! Your number: ${guess}`);
+    break;
+  } else if (answer === ">") {
+    min = guess + 1;
+  } else if (answer === "<") {
+    max = guess - 1;
+  }
 }
