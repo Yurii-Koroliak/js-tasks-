@@ -348,23 +348,65 @@
 // The initial range is from 0 to 100, divide it in half and get 50. If the user said their number is > 50, then change the range to 50 to 100. 
 // And so on until the user selects == N (it will be useful to read about the algorithm: “binary search”).
 
-let min = 0;
-let max = 100;
-let guess;
-let answer;
+// let min = 0;
+// let max = 100;
+// let guess;
+// let answer;
 
-alert("Think of a number from 0 to 100, and I'll guess it!");
+// alert("Think of a number from 0 to 100, and I'll guess it!");
 
-while (true) {
-  guess = Math.floor((min + max) / 2);
-  answer = prompt(`ur number > ${guess}, < ${guess} or == ${guess}?`);
+// while (true) {
+//   guess = Math.floor((min + max) / 2);
+//   answer = prompt(`ur number > ${guess}, < ${guess} or == ${guess}?`);
 
-  if (answer === "==") {
-    alert(`I guessed it! Your number: ${guess}`);
-    break;
-  } else if (answer === ">") {
-    min = guess + 1;
-  } else if (answer === "<") {
-    max = guess - 1;
-  }
+//   if (answer === "==") {
+//     alert(`I guessed it! Your number: ${guess}`);
+//     break;
+//   } else if (answer === ">") {
+//     min = guess + 1;
+//   } else if (answer === "<") {
+//     max = guess - 1;
+//   }
+// }
+
+
+
+
+
+
+
+// Напишите код, который будет спрашивать логин с помощью prompt.
+
+// Если посетитель вводит «Админ», то prompt запрашивает пароль, если ничего не введено или нажата клавиша Esc – показать «Отменено», в противном случае отобразить «Я вас не знаю».
+
+// Пароль проверять так:
+
+// Если введён пароль «Я главный», то выводить «Здравствуйте!»,
+// Иначе – «Неверный пароль»,
+// При отмене или в случае если ничего не введено – «Отменено».
+
+// Write code that will ask for login with prompt.
+
+// If the visitor enters “Admin”, prompt asks for password, if nothing is entered or Esc key is pressed - show “Canceled”, otherwise show “I don't know you”.
+
+// Check the password like this:
+
+// If the password “I'm in charge” is entered, display “Hello!”,
+// Otherwise - “Invalid password”,
+// If canceled or if nothing is entered - “Canceled”.
+
+
+let userLogin = prompt('what is ur login');
+
+if (userLogin == 'admin') {
+  let password = prompt('give me a pasword');
+
+  password == 1 ? console.log('hi! admin') :
+  password == (password == null || password == '') ? console.log('cancel') :
+  console.log('ur passwor is not a correct');
+
+} else if (userLogin == null || userLogin == '') {
+  console.log('cancel');
+} else {
+  console.log('i dont know u');
 }
