@@ -396,17 +396,45 @@
 // If canceled or if nothing is entered - “Canceled”.
 
 
-let userLogin = prompt('what is ur login');
+// let userLogin = prompt('what is ur login');
 
-if (userLogin == 'admin') {
-  let password = prompt('give me a pasword');
+// if (userLogin == 'admin') {
+//   let password = prompt('give me a pasword');
 
-  password == 1 ? console.log('hi! admin') :
-  password == (password == null || password == '') ? console.log('cancel') :
-  console.log('ur passwor is not a correct');
+//   password == 1 ? console.log('hi! admin') :
+//   password == (password == null || password == '') ? console.log('cancel') :
+//   console.log('ur passwor is not a correct');
 
-} else if (userLogin == null || userLogin == '') {
-  console.log('cancel');
-} else {
-  console.log('i dont know u');
+// } else if (userLogin == null || userLogin == '') {
+//   console.log('cancel');
+// } else {
+//   console.log('i dont know u');
+// }
+
+
+
+
+
+
+
+
+// Перепишите этот код используя операторы нулевого слияния и присваивания.
+// Rewrite this code using null merge and assignment operators.
+
+let num1 = 10;
+let num2 = 20;
+let result;
+
+if (result === null || result === undefined) {
+  if (num1 !== null && num1 !== undefined) {
+    result = num1;
+  } else {
+    result = num2;
+  }
 }
+
+
+result ??= num1;
+result ??= num2;
+
+// result ??= num1 ?? num2; такой же вариант но короче
