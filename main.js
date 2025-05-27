@@ -418,23 +418,74 @@
 
 
 
-// Перепишите этот код используя операторы нулевого слияния и присваивания.
-// Rewrite this code using null merge and assignment operators.
+// // Перепишите этот код используя операторы нулевого слияния и присваивания.
+// // Rewrite this code using null merge and assignment operators.
 
-let num1 = 10;
-let num2 = 20;
-let result;
+// let num1 = 10;
+// let num2 = 20;
+// let result;
 
-if (result === null || result === undefined) {
-  if (num1 !== null && num1 !== undefined) {
-    result = num1;
-  } else {
-    result = num2;
+// if (result === null || result === undefined) {
+//   if (num1 !== null && num1 !== undefined) {
+//     result = num1;
+//   } else {
+//     result = num2;
+//   }
+// }
+
+
+// result ??= num1;
+// result ??= num2;
+
+// // result ??= num1 ?? num2; такой же вариант но короче
+
+
+
+// При помощи цикла for выведите чётные числа от 2 до 10.
+// Use the for loop to print the even numbers from 2 to 10.
+
+// for (let w = 0; w < 10; w++) {
+//   if ((w % 2) == 0) {
+//     console.log(w)
+//   }
+//   console.log('...')
+// }
+
+
+
+// Напишите цикл, который предлагает prompt ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
+// Цикл должен спрашивать число пока либо посетитель не введёт число, большее 100, либо не нажмёт кнопку Отмена (ESC).
+// Write a loop that prompts the visitor to enter a number greater than 100. If the visitor enters a different number, prompt him to enter it again, and so on.
+// The loop should ask for a number until either the visitor enters a number greater than 100 or clicks Cancel (ESC).
+
+// let numberUser;
+// do {
+//   numberUser = prompt('write number that more than 100');
+// } while (Number(numberUser) <= 100 && numberUser !== null)
+
+
+// Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1.
+// Другими словами, n > 1 – простое, если при его делении на любое число кроме 1 и n есть остаток.
+// Например, 5 это простое число, оно не может быть разделено без остатка на 2, 3 и 4.
+// Напишите код, который выводит все простые числа из интервала от 2 до n.
+// Для n = 10 результат должен быть 2,3,5,7.
+// A natural number greater than 1 is called prime if it is not divisible by anything except itself and 1.
+// In other words, n > 1 is prime if it is divisible by any number other than 1 and n has a remainder.
+// For example, 5 is a prime number, it cannot be divided without remainder by 2, 3, and 4.
+// Write a code that outputs all prime numbers from the interval from 2 to n.
+// For n = 10, the result should be 2,3,5,7.
+
+
+let numberQ = Number(prompt('give me number range'));
+
+justNumber:
+for (let i = 2; i < numberQ; i++ ) {
+  
+  for (let j = 2; j < i; j++) {
+    if (i % j == 0){
+      continue justNumber;
+    };
   }
+  console.log(i)
 }
 
-
-result ??= num1;
-result ??= num2;
-
-// result ??= num1 ?? num2; такой же вариант но короче
