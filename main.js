@@ -476,16 +476,46 @@
 // For n = 10, the result should be 2,3,5,7.
 
 
-let numberQ = Number(prompt('give me number range'));
+// let numberQ = Number(prompt('give me number range'));
 
-justNumber:
-for (let i = 2; i < numberQ; i++ ) {
+// justNumber:
+// for (let i = 2; i < numberQ; i++ ) {
   
-  for (let j = 2; j < i; j++) {
-    if (i % j == 0){
-      continue justNumber;
-    };
-  }
-  console.log(i)
-}
+//   for (let j = 2; j < i; j++) {
+//     if (i % j == 0){
+//       continue justNumber;
+//     };
+//   }
+//   console.log(i)
+// }
 
+
+
+
+// Напишите if..else, соответствующий следующему switch:
+// Write the if..else corresponding to the following switch:
+// switch (browser) {
+//   case 'Edge':
+//     alert( "You've got the Edge!" );
+//     break;
+//   case 'Chrome':
+//   case 'Firefox':
+//   case 'Safari':
+//   case 'Opera':
+//     alert( 'Okay we support these browsers too' );
+//     break;
+//   default:
+//     alert( 'We hope that this page looks ok!' );
+// }
+
+let browser;
+if (browser === 'Edge') {
+  alert( "You've got the Edge!" );
+} else if (browser === 'Safari' 
+  || 'Firefox'
+  || 'Chrome'
+  || 'Opera') {
+  alert( 'Okay we support these browsers too' );
+} else {
+  alert( 'We hope that this page looks ok!' );
+}
