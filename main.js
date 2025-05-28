@@ -508,14 +508,92 @@
 //     alert( 'We hope that this page looks ok!' );
 // }
 
-let browser;
-if (browser === 'Edge') {
-  alert( "You've got the Edge!" );
-} else if (browser === 'Safari' 
-  || 'Firefox'
-  || 'Chrome'
-  || 'Opera') {
-  alert( 'Okay we support these browsers too' );
-} else {
-  alert( 'We hope that this page looks ok!' );
-}
+// let browser;
+// if (browser === 'Edge') {
+//   alert( "You've got the Edge!" );
+// } else if (browser === 'Safari' 
+//   || 'Firefox'
+//   || 'Chrome'
+//   || 'Opera') {
+//   alert( 'Okay we support these browsers too' );
+// } else {
+//   alert( 'We hope that this page looks ok!' );
+// }
+
+
+
+
+
+
+
+
+// Следующая функция возвращает true, если параметр age больше 18.
+// В ином случае она задаёт вопрос confirm и возвращает его результат.
+// Перепишите функцию, чтобы она делала то же самое, но без if, в одну строку.
+// The following function returns true if the age parameter is greater than 18.
+// Otherwise, it asks a confirm question and returns the result.
+// Rewrite the function to do the same thing, but without if, in one line.
+
+// function checkAge(age) {
+//   if (age > 18) {
+//     return true;
+//   } else {
+//     return confirm('Родители разрешили?');
+//   }
+// }
+
+// function checkAge(age) {
+//   return (age > 18 ? true : confirm('Родители разрешили?'));
+// };
+// with using ?
+
+// function checkAge(age) {
+//   return (age > 18) || (confirm('Did ur parents say its okay?'));
+// };
+// with using ||
+
+
+
+
+
+
+
+// Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
+// Пример вызовов:
+// Write a function min(a,b) that returns the smaller of the numbers a and b.
+// Example calls:
+// min(2, 5) == 2
+// min(3, -1) == -1
+// min(1, 1) == 1
+
+// function getMin (a, b) {
+//   if (a > b) {
+//     return b;
+//   } else {
+//     return a;
+//   }
+// }
+// console.log(getMin(-3, 12));
+
+
+
+
+
+// Напишите функцию pow(x,n), которая возводит x в степень n и возвращает результат.
+// Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
+
+
+
+// function getDegree (x, n) {
+//   x = +prompt('give me any number');
+//   n = +prompt('give me degree');
+
+//   if (!Number.isInteger(n)) {
+//     return console.log('degree cant be fraction');
+
+//   } else {
+//     return console.log(x**n)
+//   }
+// }
+
+// getDegree()
