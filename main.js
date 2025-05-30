@@ -597,3 +597,44 @@
 // }
 
 // getDegree()
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Ваша функция принимает два аргумента:
+// возраст нынешнего отца (лет)
+// текущий возраст его сына (лет)
+// Вычислите, сколько лет назад отец был вдвое старше своего сына (или через сколько лет он будет вдвое старше). 
+// Ответ всегда больше или равен 0, независимо от того, было ли это в прошлом или в будущем.
+// Your function takes two arguments:
+// the current father's age (years)
+// the current age of his son (years)
+// Calculate how many years ago the father was twice as old as his son (or how many years from now he will be twice as old). 
+// The answer is always greater than or equal to 0, whether it was in the past or in the future.
+
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  // your code here
+  let division = dadYearsOld/sonYearsOld;
+  if (sonYearsOld == 0) {
+    return(dadYearsOld);
+  }
+  if (division > 2) {
+    let minus = division - 2;
+    return Math.round(minus*sonYearsOld);
+  } else if (division < 2) {
+    let minus = division - 1;
+    return sonYearsOld-(Math.round(minus*sonYearsOld));
+  } else {
+    return 0;
+  }
+}
