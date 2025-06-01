@@ -622,19 +622,59 @@
 // The answer is always greater than or equal to 0, whether it was in the past or in the future.
 
 
-function twiceAsOld(dadYearsOld, sonYearsOld) {
-  // your code here
-  let division = dadYearsOld/sonYearsOld;
-  if (sonYearsOld == 0) {
-    return(dadYearsOld);
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//   // your code here
+//   let division = dadYearsOld/sonYearsOld;
+//   if (sonYearsOld == 0) {
+//     return(dadYearsOld);
+//   }
+//   if (division > 2) {
+//     let minus = division - 2;
+//     return Math.round(minus*sonYearsOld);
+//   } else if (division < 2) {
+//     let minus = division - 1;
+//     return sonYearsOld-(Math.round(minus*sonYearsOld));
+//   } else {
+//     return 0;
+//   }
+// }
+
+
+
+// Замените код Function Expression стрелочной функцией:
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Вы согласны?",
+//   function() { alert("Вы согласились."); },
+//   function() { alert("Вы отменили выполнение."); }
+// );
+
+let ask = (question, yes, no) => {
+    if (confirm(question)) yes()
+    else no();
+}
+ask(
+    "Вы согласны?",
+    () => alert("Вы согласились."),
+    () => alert("Вы отменили выполнение."),
+)
+
+
+
+
+// “A farm contains chickens and cows. 
+// There are x heads and y legs. 
+// How many chickens and cows are there?”
+function animals(heads, legs){
+  //return [Chickens, Cows]
+  let cows = (legs - (2 * heads))/2;
+  let chiken = (heads - cows);
+  if (!Number.isInteger(cows) || !Number.isInteger(chiken) || cows < 0 || chiken < 0) {
+    return "No solutions"
   }
-  if (division > 2) {
-    let minus = division - 2;
-    return Math.round(minus*sonYearsOld);
-  } else if (division < 2) {
-    let minus = division - 1;
-    return sonYearsOld-(Math.round(minus*sonYearsOld));
-  } else {
-    return 0;
-  }
+  return [chiken, cows]
 }
