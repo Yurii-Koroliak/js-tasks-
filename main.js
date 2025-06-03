@@ -726,21 +726,21 @@
 
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
 // Write a function that checks whether the number passed to it is a “perfect number”. A perfect number is a number that is equal to the sum of all its divisors.
-function perfectNumber (x) {
-  let result = 0;
-  let i = 1;
-  for (i; i < x; i++) {
-    if ((x % i) == 0) {
-      result += i;
-    };
-    result += 0;
-  }
-  if (result == x) {
-    return console.log(i + ' is perfect!!!!!!!!!!!!!!');
-  } else {
-    return console.log(' isnot perfect')
-  }
-}
+// function perfectNumber (x) {
+//   let result = 0;
+//   let i = 1;
+//   for (i; i < x; i++) {
+//     if ((x % i) == 0) {
+//       result += i;
+//     };
+//     result += 0;
+//   }
+//   if (result == x) {
+//     return console.log(i + ' is perfect!!!!!!!!!!!!!!');
+//   } else {
+//     return console.log(' isnot perfect')
+//   }
+// }
 
 
 
@@ -749,13 +749,35 @@ function perfectNumber (x) {
 // Write a function that takes the minimum and maximum values for a range and prints only those numbers in the range that are perfect.
 // Use the function you wrote earlier to find out if this number is perfect.
 
-function perfectNumberFromRange(a, b) {
-  for (a; a <= b; a++) {
-    perfectNumber(a);
+// function perfectNumberFromRange(a, b) {
+//   for (a; a <= b; a++) {
+//     perfectNumber(a);
+//   }
+// }
+
+// let z = prompt('start number of range');
+// let v = prompt('second number of range');
+// perfectNumberFromRange(+z, +v);
+
+
+
+
+// При покупке 2 или более литров предоставляется скидка 5 центов за литр,
+// при покупке 4 или более литров предоставляется скидка 10 центов за литр и так далее каждые два литра,
+// вплоть до максимальной скидки 25 центов за литр. Но общая скидка за литр не может превышать 25 центов.
+// Верните общую стоимость, округленную до 2 знаков после запятой. Также вы можете догадаться, что не будет отрицательных или нечисловых входных данных.
+function fuelPrice(litres, pricePerLitre) {
+  let price = litres * pricePerLitre;
+  if (litres >= 2 && litres < 4) {
+    price = price - (0.05 * litres); 
+  } else if (litres >= 4 && litres < 6) {
+    price = price - (0.1 * litres);
+  } else if (litres >= 6 && litres < 8) {
+    price = price - (0.15 * litres);
+  } else if (litres >= 8 && litres < 10) {
+    price = price - (0.2 * litres);
+  }  else if (litres >= 10) {
+    price = price - (0.25 * litres);
   }
+  return +price.toFixed(2);
 }
-
-let z = prompt('start number of range');
-let v = prompt('second number of range');
-perfectNumberFromRange(+z, +v);
-
