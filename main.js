@@ -653,15 +653,15 @@
 //   function() { alert("Вы отменили выполнение."); }
 // );
 
-let ask = (question, yes, no) => {
-    if (confirm(question)) yes()
-    else no();
-}
-ask(
-    "Вы согласны?",
-    () => alert("Вы согласились."),
-    () => alert("Вы отменили выполнение."),
-)
+// let ask = (question, yes, no) => {
+//     if (confirm(question)) yes()
+//     else no();
+// }
+// ask(
+//     "Вы согласны?",
+//     () => alert("Вы согласились."),
+//     () => alert("Вы отменили выполнение."),
+// )
 
 
 
@@ -669,12 +669,93 @@ ask(
 // “A farm contains chickens and cows. 
 // There are x heads and y legs. 
 // How many chickens and cows are there?”
-function animals(heads, legs){
-  //return [Chickens, Cows]
-  let cows = (legs - (2 * heads))/2;
-  let chiken = (heads - cows);
-  if (!Number.isInteger(cows) || !Number.isInteger(chiken) || cows < 0 || chiken < 0) {
-    return "No solutions"
+// function animals(heads, legs){
+//   //return [Chickens, Cows]
+//   let cows = (legs - (2 * heads))/2;
+//   let chiken = (heads - cows);
+//   if (!Number.isInteger(cows) || !Number.isInteger(chiken) || cows < 0 || chiken < 0) {
+//     return "No solutions"
+//   }
+//   return [chiken, cows]
+// }
+
+
+
+
+
+
+
+// Напиши функцію, яка обчислює факторіал переданого їй числа.
+// Write a function that calculates the factorial of the number passed to it.
+
+// function factorial(x) {
+//   let result = 1;
+//   for (let i = 1; i <= x; i++) {
+//     result = i * result;
+//   };
+//   return console.log(result);
+// }
+
+// let a = prompt('give me number');
+
+// factorial(+a)
+
+
+
+
+// Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.
+// Write a function that takes the length and width of a rectangle and calculates its area. If 1 parameter is passed to the function, it calculates the area of the square.
+
+// function area(a, b) {
+//   if (a == null && a == undefined) {
+//     return console.log(b**2 + ' is area of ur square');
+//   } else if (b == null && b == undefined) {
+//     return console.log(a**2 + ' is area of ur square');
+//   } else {
+//     return console.log(a*b);
+//   };
+// };
+
+// let q = prompt('a');
+// let c = prompt('b');
+// area(q, c)
+
+
+
+
+
+// Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
+// Write a function that checks whether the number passed to it is a “perfect number”. A perfect number is a number that is equal to the sum of all its divisors.
+function perfectNumber (x) {
+  let result = 0;
+  let i = 1;
+  for (i; i < x; i++) {
+    if ((x % i) == 0) {
+      result += i;
+    };
+    result += 0;
   }
-  return [chiken, cows]
+  if (result == x) {
+    return console.log(i + ' is perfect!!!!!!!!!!!!!!');
+  } else {
+    return console.log(' isnot perfect')
+  }
 }
+
+
+
+// Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими.
+// Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
+// Write a function that takes the minimum and maximum values for a range and prints only those numbers in the range that are perfect.
+// Use the function you wrote earlier to find out if this number is perfect.
+
+function perfectNumberFromRange(a, b) {
+  for (a; a <= b; a++) {
+    perfectNumber(a);
+  }
+}
+
+let z = prompt('start number of range');
+let v = prompt('second number of range');
+perfectNumberFromRange(+z, +v);
+
