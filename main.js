@@ -781,3 +781,40 @@ function fuelPrice(litres, pricePerLitre) {
   }
   return +price.toFixed(2);
 }
+
+
+
+
+
+// Given an unsorted array of 3 positive integers [ n1, n2, n3 ], determine if it is possible to form a Pythagorean Triple using those 3 integers.
+function isPythagoreanTriple(integers) {
+  // Good luck friends!
+  let firstNumm = integers[0]**2;
+  let secondNumm = integers[1]**2;
+  let thirdNumm = integers[2]**2;
+  
+  if (firstNumm > secondNumm && firstNumm > thirdNumm) {
+    return (firstNumm === (secondNumm + thirdNumm));
+  } else if (secondNumm > firstNumm && secondNumm > thirdNumm) {
+    return (secondNumm === (firstNumm + thirdNumm));
+  } else if (thirdNumm > firstNumm && thirdNumm > secondNumm) {
+    return (thirdNumm === (firstNumm + secondNumm));
+  };
+}
+
+
+function isPythagoreanTriple(integers) {
+  // Good luck friends!
+  for (let i = 0; i < integers.length - 1; i++) {
+    
+    for (let j = 0; j < integers.length - i - 1; j++) {
+      
+      if (integers[j] > integers[j + 1]) {
+        
+        [integers[j], integers[j + 1]] = [integers[j + 1], integers[j]];
+      }
+    }
+  }
+  
+  return ((integers[2] ** 2) === ((integers[0] ** 2) + (integers[1] ** 2)))
+}
