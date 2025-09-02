@@ -726,21 +726,21 @@
 
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
 // Write a function that checks whether the number passed to it is a “perfect number”. A perfect number is a number that is equal to the sum of all its divisors.
-// function perfectNumber (x) {
-//   let result = 0;
-//   let i = 1;
-//   for (i; i < x; i++) {
-//     if ((x % i) == 0) {
-//       result += i;
-//     };
-//     result += 0;
-//   }
-//   if (result == x) {
-//     return console.log(i + ' is perfect!!!!!!!!!!!!!!');
-//   } else {
-//     return console.log(' isnot perfect')
-//   }
-// }
+function perfectNumber (x) {
+  let result = 0;
+  let i = 1;
+  for (i; i < x; i++) {
+    if ((x % i) == 0) {
+      result += i;
+    };
+    result += 0;
+  }
+  if (result == x) {
+    return console.log(i + ' is perfect!!!!!!!!!!!!!!');
+  } else {
+    return console.log(' isnot perfect')
+  }
+}
 
 
 
@@ -749,15 +749,15 @@
 // Write a function that takes the minimum and maximum values for a range and prints only those numbers in the range that are perfect.
 // Use the function you wrote earlier to find out if this number is perfect.
 
-// function perfectNumberFromRange(a, b) {
-//   for (a; a <= b; a++) {
-//     perfectNumber(a);
-//   }
-// }
+function perfectNumberFromRange(a, b) {
+  for (a; a <= b; a++) {
+    perfectNumber(a);
+  }
+}
 
-// let z = prompt('start number of range');
-// let v = prompt('second number of range');
-// perfectNumberFromRange(+z, +v);
+let z = prompt('start number of range');
+let v = prompt('second number of range');
+perfectNumberFromRange(+z, +v);
 
 
 
@@ -817,4 +817,45 @@ function isPythagoreanTriple(integers) {
   }
   
   return ((integers[2] ** 2) === ((integers[0] ** 2) + (integers[1] ** 2)))
+}
+
+
+
+// You are given two vectors starting from the origin (x=0, y=0) with coordinates (x1,y1) and (x2,y2).
+// Your task is to find out if these vectors are collinear. Collinear vectors are vectors that lie on the same straight line. 
+// They can be directed in the same or opposite directions. One vector can be obtained from another by multiplying it by a certain number.
+// In terms of coordinates, vectors (x1, y1) and (x2, y2) are collinear if (x1, y1) = (k*x2, k*y2) , where k is any number acting as a coefficient.
+
+// Вам даны два вектора, начинающиеся из начала координат (x=0, y=0) с координатами (x1,y1) и (x2,y2).
+// Ваша задача — выяснить, являются ли эти векторы коллинеарными. Коллинеарные векторы — это векторы, лежащие на одной прямой. 
+// Они могут быть направлены в одном или противоположных направлениях. Один вектор может быть получен из другого путем умножения на определенное число.
+// С точки зрения координат, векторы (x1, y1) и (x2, y2) являются коллинеарными, если (x1, y1) = (k*x2, k*y2) , где k — любое число, выступающее в качестве коэффициента.
+
+// (x1 * y2) = (x2 * y1) - collinear
+function collinearity( x1,y1, x2,y2 ) {
+  let first = x1*y2;
+  let second = x2*y1;
+  let result = first==second;
+  return result ;
+}
+
+// (x1, y1) = (k*x2, k*y2) - collinear
+function collinearity( x1,y1, x2,y2 ) {
+  let k;
+  let result;
+  if (x1 === 0 && y1 === 0){
+    return true;
+  } else if (x2 ===0 && y2 === 0){
+    return true;
+  }
+  if (x2 !== 0) {
+    k = x1/x2;
+    result = (k*y2) == y1;
+  } else {
+    k = y1/y2;
+    result = (k*x2) == x1;
+  };
+  
+
+  return result ;
 }
