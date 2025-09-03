@@ -910,3 +910,32 @@ const quarterOf = (month) => {
   }
   
 }
+
+
+
+// Given three integers a, b, and c, return the largest number obtained after inserting the operators +, *, and parentheses ().
+// In other words, try every combination of a, b, and c with the operators, without reordering the operands, and return the maximum value.
+// При заданных трех целых числах a, b и c верните наибольшее число, полученное после вставки операторов +, * и скобок ().
+// Другими словами, попробуйте все комбинации a, b и c с операторами, не меняя порядок операндов, и верните максимальное значение.
+
+function expressionMatter(a, b, c) {
+  
+  let first = a * (b + c);
+  let second = a * b * c;
+  let third = a + b * c;
+  let four = (a + b) * c;
+  let five = a + b + c;
+  let six = (a * b) + c;
+  
+  let result = [first, second, third, four, five, six];
+  
+  for (let i = 0; i < result.length; i++) {
+    for (let j = 0; j < result.length-1; j++){
+      if (result[j] > result[j+1]) {
+        [result[j], result[j+1]] = [result[j+1], result[j]] 
+      } 
+    }
+  }
+  return result[result.length - 1];
+  
+}
